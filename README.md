@@ -29,7 +29,7 @@ Trace events happened while running rails server. It will listen and record even
 # Start
 
 1. After finished #Setup, start the server using `rails server`. 
-   Reminder note: you might need to open another terminal and run resq, `env INTERVAL=0.1 TERM_CHILD=1 RESQUE_TERM_TIMEOUT=7 QUEUES=talenox_critical,talenox_high,talenox_webhook,talenox_low,talenox_devops,read_replica bundle exec rake resque:work`, if the pages you are viewing contain jobs. Check out `Procfile.dev` for more details.
+   Reminder note: if you have any other background job, you need to run it on other terminal, it doesn't work well will `foreman start -f Procfile.dev`
 
 2. Then visit any page you like. 
 
